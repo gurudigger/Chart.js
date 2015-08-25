@@ -2001,7 +2001,7 @@
                         }
                         if(ctx.canvas.className.includes("radar")){
                             switch(this.labels[i].key){
-                            case 'career_status':    ctx.fillStyle = '#58595B'; break;
+                            case 'career_status':    ctx.fillStyle = '#648DB5'; break;
                             case 'product_category': ctx.fillStyle = '#8DC2CE'; break;
                             case 'city':             ctx.fillStyle = '#8E9C9C'; break;
                             case 'ability':          ctx.fillStyle = '#DAC397'; break;
