@@ -1153,7 +1153,7 @@
             if (this.display){
                 var ctx = this.ctx;
                 ctx.beginPath();
-                if (ctx.canvas.className.includes('radar')){
+                if (ctx.canvas.className.indexOf("radar") >= 0){
                     if(this.label.value > 50 ){
                         ctx.arc(this.x, this.y, 4, 0, Math.PI*2);
                     }else{
@@ -1805,7 +1805,7 @@
             for (i=0;i<this.valuesCount;i++){
                 // 5px to space the text slightly out - similar to what we do in the draw function.
                 pointPosition = this.getPointPosition(i, largestPossibleRadius);
-                if(this.ctx.canvas.className.includes("radar")){
+                if(this.ctx.canvas.className.indexOf("radar") >= 0){
                     textWidth = this.ctx.measureText(template(this.templateString, { value: this.labels[i].name })).width + 5;
                 }else{
                     textWidth = this.ctx.measureText(template(this.templateString, { value: this.labels[i] })).width + 5;
@@ -1899,7 +1899,7 @@
                         if (this.lineWidth > 0){
                             ctx.strokeStyle = this.lineColor;
                             ctx.lineWidth = this.lineWidth;
-                            if(ctx.canvas.className.includes("radar")){
+                            if(ctx.canvas.className.indexOf("radar") >= 0){
                                 if (index == (this.yLabels.length -1) ){
                                     ctx.beginPath();
                                     ctx.arc(this.xCenter, this.yCenter, yCenterOffset, 0, Math.PI*2);
@@ -1951,7 +1951,7 @@
                     ctx.strokeStyle = this.angleLineColor;
                     for (var i = this.valuesCount - 1; i >= 0; i--) {
                         if (this.angleLineWidth > 0){
-                            if(ctx.canvas.className.includes("radar")){
+                            if(ctx.canvas.className.indexOf("radar") >= 0){
                                 var max = this.values[i];
                                 var outerPosition = this.getPointPosition(i, this.calculateCenterOffset(max));
                                 ctx.setLineDash([3]);
@@ -1999,7 +1999,7 @@
                         } else {
                             ctx.textBaseline = 'top';
                         }
-                        if(ctx.canvas.className.includes("radar")){
+                        if(ctx.canvas.className.indexOf("radar") >= 0){
                             switch(this.labels[i].key){
                             case 'career_status':    ctx.fillStyle = '#648DB5'; break;
                             case 'product_category': ctx.fillStyle = '#8DC2CE'; break;
