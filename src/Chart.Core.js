@@ -2004,15 +2004,16 @@
 							ctx.textBaseline = 'top';
 						}
 						if(ctx.canvas.className.indexOf("radar") >= 0){
-							switch(this.labels[i].key){
-							case 'career_status':    ctx.fillStyle = '#648DB5'; break;
-							case 'product_category': ctx.fillStyle = '#8DC2CE'; break;
-							case 'city':             ctx.fillStyle = '#8E9C9C'; break;
-							case 'ability':          ctx.fillStyle = '#DAC397'; break;
+						    switch(this.labels[i].key){
+                                                        case 'opportunity_type': ctx.fillStyle = '#648DB5'; break;
+							case 'career_status':    ctx.fillStyle = '#6D7294'; break;
+							case 'category':         ctx.fillStyle = '#8DC2CE'; break;
+							case 'location':         ctx.fillStyle = '#8E9C9C'; break;
+							case 'skill':            ctx.fillStyle = '#DAC397'; break;
 							case 'role':             ctx.fillStyle = '#ABB198'; break;
-							case 'product_stage':    ctx.fillStyle = '#95BED8'; break;
-							case 'team_size':        ctx.fillStyle = '#E0A8A4'; break;
-							case 'interests':        ctx.fillStyle = '#F4BB75'; break;
+							case 'stage':            ctx.fillStyle = '#95BED8'; break;
+							case 'scale':            ctx.fillStyle = '#E0A8A4'; break;
+							case 'interest':         ctx.fillStyle = '#F4BB75'; break;
 							default: ctx.fillStyle = '#123456';
 							}
 							if (i == 0){
