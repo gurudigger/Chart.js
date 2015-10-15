@@ -1958,13 +1958,17 @@
 							if(ctx.canvas.className.indexOf("radar") >= 0){
 								var max = this.values[i];
 								var outerPosition = this.getPointPosition(i, this.calculateCenterOffset(max));
-								ctx.setLineDash([3]);
+                                                                if(ctx.setLineDash){
+                                                                    ctx.setLineDash([3]);
+                                                                }
 								ctx.beginPath();
 								ctx.moveTo(this.xCenter, this.yCenter);
 								ctx.lineTo(outerPosition.x, outerPosition.y);
 								ctx.stroke();
-								ctx.closePath();
-								ctx.setLineDash([0]);
+							        ctx.closePath();
+                                                                if(ctx.setLineDash){
+								    ctx.setLineDash([0]);
+                                                                }
 							}
 							else {
 								var outerPosition = this.getPointPosition(i, this.calculateCenterOffset(this.max));
