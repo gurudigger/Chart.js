@@ -2021,16 +2021,16 @@
 							default: ctx.fillStyle = '#123456';
 							}
 							if (i == 0){
-								ctx.fillText(this.labels[i].value + "%", pointLabelPosition.x, pointLabelPosition.y - 15);
+								ctx.fillText(this.labels[i].value, pointLabelPosition.x, pointLabelPosition.y - 15);
 								ctx.fillText(this.labels[i].name, pointLabelPosition.x, pointLabelPosition.y);
 							}else if( i == 1){
-								ctx.fillText(this.labels[i].value + "%", pointLabelPosition.x + 5, pointLabelPosition.y - 5);
+								ctx.fillText(this.labels[i].value, pointLabelPosition.x + 5, pointLabelPosition.y - 5);
 								ctx.fillText(this.labels[i].name, pointLabelPosition.x + 5, pointLabelPosition.y + 10);
 							}else if( i == this.labels.length - 1){
-								ctx.fillText(this.labels[i].value + "%", pointLabelPosition.x - 5, pointLabelPosition.y - 5);
+								ctx.fillText(this.labels[i].value, pointLabelPosition.x - 5, pointLabelPosition.y - 5);
 								ctx.fillText(this.labels[i].name, pointLabelPosition.x - 5, pointLabelPosition.y + 10);
 							}else{
-								ctx.fillText(this.labels[i].value + "%", pointLabelPosition.x, pointLabelPosition.y);
+								ctx.fillText(this.labels[i].value, pointLabelPosition.x, pointLabelPosition.y);
 								ctx.fillText(this.labels[i].name, pointLabelPosition.x, pointLabelPosition.y + 15);
 							}
 						}else{
