@@ -1810,7 +1810,7 @@
 				// 5px to space the text slightly out - similar to what we do in the draw function.
 				pointPosition = this.getPointPosition(i, largestPossibleRadius);
 				if(this.ctx.canvas.className.indexOf("radar") >= 0){
-					textWidth = this.ctx.measureText(template(this.templateString, { value: this.labels[i].name })).width + 5;
+					textWidth = this.ctx.measureText(template(this.templateString, { value: this.labels[i].name })).width + 10;
 				}else{
 					textWidth = this.ctx.measureText(template(this.templateString, { value: this.labels[i] })).width + 5;
 				}
